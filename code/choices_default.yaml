@@ -1,0 +1,49 @@
+L1:
+  coil:
+    type: REBCO_HTS
+    B_T: 10.0
+    standoff_m: 1.0
+  plasma:
+    feed: H2O_or_CO2
+    rate_g_per_min: 1.0
+
+L2:
+  laser_band_um:
+    - 1.0
+    - 1.06
+    - 1.07
+    - 1.55
+  plasma_mirror:
+    type: liquid_sheet
+    R_PM_nominal: 0.6
+  sbs_pcm:
+    type: tapered_fiber
+    R_SBS_nominal: 0.75
+    chi_dump: 0.2
+
+L3:
+  architecture: stuffed_whipple
+  bumper:
+    material: Al
+    tb_mm: 2.0
+  stuffing:
+    type: UHMWPE_fabric
+    t_mm: 5.0
+    rho: 950.0
+  rear_wall:
+    material: Al
+  standoff_m: 0.5
+  projectile_defaults:
+    rho_p: 2700.0
+    D_mm: 10.0
+    V_kms: 7.0
+
+RF:
+  target_margin_dB: 20
+  SE_db: 40
+  filter_db: 20
+  cable_db: 10
+  allowed_dBuVpm: 140
+
+Hull:
+  thermal_limit_kW: 40
