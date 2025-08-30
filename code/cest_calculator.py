@@ -1,4 +1,3 @@
-
 import argparse
 import math
 import json
@@ -51,8 +50,8 @@ def main():
     # Hull limit
     ap.add_argument("--hull_kw", type=float, default=None, help="Hull thermal limit (kW)")
     # HPM/EMP
-    ap.add_argument("--threat_dBuVpm", type=float, default=200.0, help="Incident field strength (dBµV/m)")
-    ap.add_argument("--allowed_dBuVpm", type=float, default=None, help="Allowable at victim port (dBµV/m)")
+    ap.add_argument("--threat_dBuVpm", type=float, default=200.0, help="Incident field strength (dBΒµV/m)")
+    ap.add_argument("--allowed_dBuVpm", type=float, default=None, help="Allowable at victim port (dBΒµV/m)")
     ap.add_argument("--SE_db", type=float, default=None, help="Shielding effectiveness (dB)")
     ap.add_argument("--filter_db", type=float, default=None, help="Feedthrough filter attenuation (dB)")
     ap.add_argument("--cable_db", type=float, default=None, help="Cable/connector shielding (dB)")
@@ -122,3 +121,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
